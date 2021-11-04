@@ -1,0 +1,33 @@
+*{
+    
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+
+}
+body{
+    text-align: center;
+}
+
+nav a{
+    text-decoration: none !important;
+    font-family: bignoodletitling !important;
+    letter-spacing: 4px !important;
+    font-size: 25px !important;
+    margin: 0 10px !important;
+    color: #fff !important;
+}
+.container spice p{
+    font-family: bignoodletitling !important;
+    font-size: 25px !important;
+
+
+}
+
+.footerli{
+    letter-spacing: 5px;
+    font-size: 20px;
+    text-align: center;
+}
+
+
