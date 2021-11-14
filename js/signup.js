@@ -92,7 +92,7 @@ function validate(){
     if(password==repassword){
         RepeatDisp.style.backgroundColor = 'green';
         RepeatDisp.textContent = 'Passwords match';
-        alert("Signup Successfull")
+        alert("Signup Successfull. PLease Login to Continue ")
         return true;
     }
     else{
