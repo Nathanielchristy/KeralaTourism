@@ -5,6 +5,7 @@ function validate(){
     let repassword=document.getElementById("repassword").value
     let mobno=document.getElementById("mobno").value;
     let regexpemail = /^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+)\.([a-z]{2,3})(.[a-z]{2,3})?$/
+    let regexpno =/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/
     let RepeatDisp =document.getElementById("RepeatDisp"); 
     let emailvalid=document.getElementById("emailvalid");
     // let strengthBadge = document.getElementById('StrengthDisp');
@@ -15,14 +16,24 @@ function validate(){
         alert("Fields should not be empty");
         return false;
     }
-    if(isNaN(mobno)){
-        alert("Mobile number should only contain digits");
+    // if(isNaN(mobno)){
+    //     alert("Mobile number should only contain digits");
+    //     return false;
+    // }
+    // if (mobno.length<10){
+    //     alert("Please re enter mobile number");
+    //     return false;
+    // }
+    if (regexpno.test(mobno)){
+        novalid.style.backgroundColor = 'green';
+        novalid.textContent = 'Mobile Number is valid';
+    }
+    else{
+        novalid.style.backgroundColor = 'red';
+        novalid.textContent = 'Mobile Number is Not valid';
         return false;
     }
-    if (mobno.length<10){
-        alert("Please re enter mobile number");
-        return false;
-    }
+
     CheckPasswordStrength(password)
     function CheckPasswordStrength(password) {
         var password_strength = document.getElementById("password_strength");
