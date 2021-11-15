@@ -10,7 +10,7 @@ function validate(){
     if(regexpemail.test(email)){
         emailvalid.style.backgroundColor = 'green';
         emailvalid.textContent = 'Email is valid';
-        alert('Success');
+
     }
     else{
         emailvalid.style.backgroundColor = 'red';
